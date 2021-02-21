@@ -1,0 +1,51 @@
+POST http://localhost:3000/cities
+Content-Type: application/json
+
+{
+    "city":"bilaspur"
+}
+########
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+    "name": "Seema Sonwani",
+    "email": "r@navgurukul.org",
+	"password": "123Abhi",
+	"age": 22,
+	"city_id": 2
+}
+
+########
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "text": "Buy ",
+    "assignedTo": 2,
+	"dueDate": "2020-08-14"
+}
+
+#####
+GET http://localhost:3000/
+
+#######
+GET http://localhost:3000/users/2
+# Authorization: token {"email":"r@navgurukul.org","password":"123Abhi"}
+
+###############
+GET http://localhost:3000/todos
+# Authorization: token {"email":"r@navgurukul.org","password":"123Abhi"}
+
+############
+GET http://localhost:3000/mytodos
+# Authorization: token {"email":"r@navgurukul.org","password":"123Abhi"}
+
+
+
+
+
+
+
+
+
